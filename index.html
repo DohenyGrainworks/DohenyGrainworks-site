@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doheny Grainworks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('your-hero-image.jpg') center/cover no-repeat;
+      color: black;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 48px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .category {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #0057a0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background: #0057a0;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Doheny Grainworks</strong></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#custom">Custom Orders</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="home">
+    <h1>Built to Celebrate. Crafted to Last.</h1>
+    <p>Custom CNC and woodworking products made by a grandfather-grandson duo.</p>
+    <div class="cta-buttons">
+      <a href="#shop">Shop Custom Gifts</a>
+      <a href="#custom">Request a Custom Order</a>
+    </div>
+  </div>
+
+  <div class="section" id="shop">
+    <h2>Custom Gifts for Every Moment</h2>
+    <div class="categories">
+      <div class="category">
+        <h3>Weddings</h3>
+        <p>Personalized signs, engraved names, heirloom décor.</p>
+      </div>
+      <div class="category">
+        <h3>Baby & Family</h3>
+        <p>Celebrate new life with custom keepsakes.</p>
+      </div>
+      <div class="category">
+        <h3>Restaurants & Business</h3>
+        <p>Branded trays, boards, and signage.</p>
+      </div>
+      <div class="category">
+        <h3>Office & Corporate</h3>
+        <p>Desk nameplates and large tables.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="custom">
+    <h2>Request a Custom Order</h2>
+    <form action="https://formspree.io/f/xdkgvrgk" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="item-type">Item Type</label>
+      <select id="item-type" name="item-type">
+        <option value="wedding">Wedding Sign</option>
+        <option value="baby">Baby Keepsake</option>
+        <option value="restaurant">Restaurant Tray</option>
+        <option value="office">Office Table/Nameplate</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="custom-text">Custom Text / Design Notes</label>
+      <textarea id="custom-text" name="custom-text" rows="4" required></textarea>
+      <label for="upload">Upload Reference Image (optional)</label>
+      <input type="file" id="upload" name="upload">
+      <label for="deadline">Deadline or Event Date</label>
+      <input type="date" id="deadline" name="deadline">
+      <button type="submit">Submit Request</button>
+      <input type="hidden" name="_captcha" value="false">
+    </form>
+  </div>
+
+  <div class="section" id="about">
+    <h2>About Doheny Grainworks</h2>
+    <p>
+      <strong>Craftsmanship Across Generations.</strong><br><br>
+      Doheny Grainworks is a family-owned business led by a grandfather-grandson team in Connecticut. With a passion for precision and legacy, we create personalized wooden pieces that celebrate life’s milestones.<br><br>
+      Co-founded by William L. Doheny IV and William Doheny Jr., Doheny Grainworks blends timeless woodworking traditions with cutting-edge CNC technology. Every piece we create—whether for a nursery, a wedding, or a boardroom—is designed to bring lasting meaning and value to the people and spaces it touches.<br><br>
+      Our goal is simple: <strong>build things that matter—and build them to last.</strong>
+    </p>
+  </div>
+
+  <div class="section" id="gallery">
+    <h2>Gallery</h2>
+    <p>See our recent work and behind-the-scenes craftsmanship.</p>
+    <a href="#gallery" class="cta-buttons">View Full Gallery</a>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Stay in Touch</h2>
+    <p>Follow us on social media or join our email list for updates.</p>
+    <div class="cta-buttons">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Doheny Grainworks. All rights reserved.</p>
+  </footer>
+</body>
+</html>
